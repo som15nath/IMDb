@@ -1,25 +1,30 @@
-import Header from '@/components/Header'
-import './globals.css'
-import { Inter } from 'next/font/google'
+import Header from "@/components/Header";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Providers from "./Providers";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'IMDb Clone',
-  description: 'This is Clone of IMDb Clone'
-}
+  title: "IMDb Clone",
+  description: "This is Clone of IMDb Clone",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-         {/* Header */}
-          <Header/>
+        <Providers>
+          {/* Header */}
+          <Header />
 
+          {/* Navbar */}
 
-        {children}
-      
+          {/* SearchBox */}
+
+          {children}
+        </Providers>
       </body>
     </html>
-  )
+  );
 }
